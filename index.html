@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- FONTAWESOME -->
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <!-- VUE.JS -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <div id="app">
+        <h1>Movie to watch</h1>
+        <input type="text" name="insert-film-name" id="insert-film-name">
+        <ul>
+            <li v-for="film in  movieListToWatch"> {{ film.text}} </li>
+        </ul>
+    </div>
+
+    <!-- JS -->
+    <script src="./script.js"></script>
+</body>
+</html>
