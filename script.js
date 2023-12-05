@@ -34,5 +34,4 @@ createApp({
           }
       },
   },
-});
-app.mount('#app');
+}).mount('#app');
