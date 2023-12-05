@@ -7,7 +7,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
     <!-- FONTAWESOME -->
-    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <!-- VUE.JS -->
@@ -16,8 +16,8 @@
         <h1>Movie to watch</h1>
         <input type="text" name="add-movie-name" id="add-movie-name">
         <button @click="addMovie"type="button" id="add-movie-btn">Add Movie</button>
-        <ul>
-            <li v-for="movie in  movieListToWatch"> {{ movie.text }} </li>
+        <ul v-for="movie in  movieListToWatch"> {{ movie.text }}
+            <li></li>
             <button @click="removeMovie"> <i class="fa-solid fa-xmark"></i> </button>
         </ul>
     </div>
