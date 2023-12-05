@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            newMovie:``,
             movieListToWatch: [
                 {text:`Hacksaw Ridge`, done:`true`},
                 {text:`Marvel Spider-Man`, done:`true`},
@@ -19,4 +20,19 @@ createApp({
             ]
         }
     },
-}).mount('#app');
+    methods: {
+      removeMovie(movie){
+          this.movieListToWatch.splice(movie, 1);
+      },
+      addMovie() {
+          if (this.newMovie.trim() !== '') { 
+              this.movieListToWatch.push({
+                  text: this.newMovie,
+                  done: false 
+              });
+              this.newMovie = '';
+          }
+      },
+  },
+});
+app.mount('#app');

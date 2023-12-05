@@ -14,9 +14,11 @@
     <script src="https://unpkg.com/vue@3"></script>
     <div id="app">
         <h1>Movie to watch</h1>
-        <input type="text" name="insert-film-name" id="insert-film-name">
+        <input type="text" name="add-movie-name" id="add-movie-name">
+        <button @click="addMovie"type="button" id="add-movie-btn">Add Movie</button>
         <ul>
-            <li v-for="film in  movieListToWatch"> {{ film.text}} </li>
+            <li v-for="movie in  movieListToWatch"> {{ movie.text }} </li>
+            <button @click="removeMovie"> <i class="fa-solid fa-xmark"></i> </button>
         </ul>
     </div>
 
